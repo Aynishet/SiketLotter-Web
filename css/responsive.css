@@ -1,0 +1,32 @@
+/* =====================================
+   SIKET EKUB RESPONSIVE DESIGN
+===================================== */
+
+@media (min-width:600px) {
+  .app { max-width: 520px; }
+  .welcome h2 { font-size: 40px; }
+  .cars-grid { grid-template-columns: repeat(3, 1fr); }
+  .bottom-nav { max-width: 520px; }
+}
+
+@media (min-width:900px) {
+  body { background: linear-gradient(135deg, #020B1C, #0A6B63); }
+  .app { margin: 40px auto; border-radius: 35px; min-height: calc(100vh - 80px); box-shadow: 0 20px 80px rgba(0,0,0,.5); }
+  .top-header { border-radius: 35px 35px 0 0; }
+  .bottom-nav { border-radius: 0 0 35px 35px; }
+}
+
+@media(max-width:390px) {
+  .brand h1 { font-size: 16px; }
+  .logo-box { width: 48px; height: 48px; }
+  .language { padding: 8px 12px; font-size: 12px; }
+  .welcome h2 { font-size: 26px; }
+  .details { flex-direction: column; gap: 10px; }
+  .cars-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 22px; }
+  .bottom-nav span { font-size: 22px; }
+}
+
+@media(min-width:1400px) {
+  .app { max-width: 600px; }
+}

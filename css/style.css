@@ -1,0 +1,218 @@
+:root {
+  --bg: #020B1C;
+  --card: #061A24;
+  --card2: #092533;
+  --green: #0A6B63;
+  --gold: #DDBB5A;
+  --white: #ffffff;
+  --muted: #8AA9A6;
+  --border: rgba(221, 187, 90, .25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, rgba(10,107,99,.35), transparent 35%), var(--bg);
+  color: white;
+}
+
+.app {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  margin: auto;
+  padding-bottom: 90px;
+  overflow: hidden;
+}
+
+/* ===================== HEADER ===================== */
+.top-header {
+  height: 100px; padding: 10px 10px; display: flex;
+  justify-content: space-between; align-items: center;
+  background: rgba(2, 11, 28, .85); backdrop-filter: blur(15px);
+  position: sticky; top: 0; z-index: 100;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo-box { width: 70px; height: 70px; border-radius: 18px; background: linear-gradient(135deg, var(--gold), var(--green)); display: flex; align-items: center; justify-content: center; }
+.logo-box img { width: 140%; height: 140%; object-fit: contain; }
+.brand h1 { font-size: 20px; font-weight: 1200; }
+.brand p { font-size: 20px; color: var(--gold); }
+.language { background: var(--card); border: 1px solid var(--border); color: white; padding: 10px 15px; border-radius: 20px; }
+
+/* ===================== HOME ===================== */
+.page { display: none; padding: 20px; }
+.page.active { display: block; }
+.welcome { background: linear-gradient(135deg, rgba(10,107,99,.7), rgba(6,26,36,.95)); border-radius: 28px; padding: 25px; margin-top: 15px; }
+.welcome span { font-size: 12px; color: var(--gold); font-weight: 600; }
+.welcome h2 { font-size: 32px; line-height: 1.2; margin: 14px 0; }
+.welcome p { color: #d0dddd; font-size: 14px; line-height: 1.6; }
+.primary-btn { width: 100%; margin-top: 20px; padding: 15px; border: none; border-radius: 18px; background: linear-gradient(90deg, var(--gold), #f5d87b); color: #111; font-size: 14px; font-weight: 500; cursor: pointer; }
+
+/* ===================== AD BANNER (HALF SIZE) ===================== */
+.ad-banner {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  max-height: 160px; /* Restricts height to 160px (half of usual) */
+}
+
+.ad-banner img {
+  width: 100%;
+  height: 80%;
+  max-height: 140px;
+  object-fit: cover; /* Crops the image cleanly without stretching */
+  display: block;
+}
+
+/* ===================== FEATURE CAR ===================== */
+.featured-card { background: var(--card); border-radius: 30px; margin-top: 25px; overflow: hidden; border: 1px solid var(--border); }
+.car-image { position: relative; }
+.car-image img { width: 100%; height: 250px; object-fit: cover; }
+.badge { position: absolute; top: 15px; left: 15px; background: var(--gold); color: #111; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.car-info { padding: 20px; }
+.car-info h3 { font-size: 22px; }
+.details { display: flex; justify-content: space-between; margin: 20px 0; }
+.details div { background: var(--card2); padding: 12px; border-radius: 15px; font-size: 12px; }
+.details strong { display: block; color: var(--gold); font-size: 18px; }
+.progress { height: 10px; background: #122F3A; border-radius: 20px; overflow: hidden; }
+.progress-bar { width: 65%; height: 100%; background: linear-gradient(90deg, var(--green), var(--gold)); }
+.car-info p { margin-top: 10px; color: var(--muted); font-size: 13px; }
+
+/* ===================== CAR GRID ===================== */
+.section-title { font-size: 24px; margin: 30px 0 20px; }
+.cars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.small-car { background: var(--card); border-radius: 20px; overflow: hidden; }
+.small-car img { width: 100%; height: 130px; object-fit: cover; }
+.small-car h4 { padding: 12px; font-size: 14px; }
+
+/* ===================== VIDEO ===================== */
+.video-card { background: var(--card); padding: 20px; border-radius: 25px; margin-top: 25px; }
+.video-card video { width: 100%; border-radius: 20px; }
+
+/* ===================== TICKETS ===================== */
+.ticket-card { background: var(--card); padding: 20px; border-radius: 25px; }
+.numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+.numbers button { padding: 15px; border-radius: 15px; border: 1px solid var(--border); background: var(--card2); color: white; }
+.ticket-price { background: var(--card2); padding: 20px; border-radius: 20px; text-align: center; }
+.ticket-price strong { display: block; font-size: 30px; color: var(--gold); }
+
+/* ===================== WINNERS & ACCOUNT ===================== */
+.winner-card { background: var(--card); padding: 20px; border-radius: 25px; display: flex; gap: 15px; border: 1px solid var(--border); }
+.winner-card img { width: 90px; height: 90px; border-radius: 20px; object-fit: cover; }
+.winner-card h3 { font-size: 18px; }
+.winner-card p { font-size: 14px; color: var(--muted); }
+.winner-card span { color: var(--gold); font-size: 13px; font-weight: 600; }
+.winners-list { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+
+.account-card { background: var(--card); padding: 25px; border-radius: 30px; text-align: center; }
+.profile img { width: 80px; height: 80px; }
+.account-item { background: var(--card2); padding: 15px; border-radius: 15px; margin-top: 15px; display: flex; justify-content: space-between; }
+
+/* ===================== BOTTOM NAV ===================== */
+.bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; height: 75px; background: #03111D; display: flex; justify-content: space-around; align-items: center; border-top: 1px solid var(--border); }
+.bottom-nav a { color: var(--muted); text-decoration: none; display: flex; flex-direction: column; align-items: center; font-size: 12px; cursor: pointer; }
+.bottom-nav span { font-size: 25px; }
+.bottom-nav .active { color: var(--gold); }
+
+/* ===================== EKUB PRIZE GRID ===================== */
+.ekub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+.ekub-card { background: var(--card); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); position: relative; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; }
+.ekub-card:hover { transform: scale(1.02); }
+.ekub-card.grand { border: 2px solid var(--gold); box-shadow: 0 0 15px rgba(221, 187, 90, 0.2); }
+.ekub-badge { position: absolute; top: 10px; left: 10px; background: var(--gold); color: #111; padding: 5px 12px; border-radius: 15px; font-size: 11px; font-weight: 700; z-index: 2; }
+.ekub-card img { width: 100%; height: 140px; object-fit: cover; }
+.ekub-card.cash img { width: 100%; height: 140px; object-fit: cover; display: block; }
+.ekub-info { padding: 14px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.ekub-info h3 { font-size: 14px; margin-bottom: 8px; line-height: 1.2; }
+.ekub-details { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.ekub-details span { background: var(--card2); padding: 4px 10px; border-radius: 10px; display: inline-block; width: fit-content; }
+
+/* ===================== COUNTDOWN TIMER (DOUBLE SIZE) ===================== */
+.countdown-container {
+  background: var(--card);
+  border-radius: 25px;
+  padding: 25px 15px;
+  margin-top: 15px;
+  text-align: center;
+  border: 2px solid var(--gold); /* Gold border to make it pop */
+}
+
+.countdown-label {
+  font-size: 20px; /* Increased from 14px */
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.countdown-timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card2);
+  padding: 10px 16px;
+  border-radius: 15px;
+  min-width: 55px;
+}
+
+.countdown-item span {
+  font-size: 40px; /* DOUBLED from 20px */
+  font-weight: 900;
+  color: var(--gold);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+.countdown-item small {
+  font-size: 11px; /* Increased from 7px */
+  color: var(--muted);
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.colon {
+  font-size: 34px; /* DOUBLED from 18px */
+  font-weight: 700;
+  color: var(--gold);
+  display: inline-block;
+  padding-bottom: 4px;
+  line-height: 1;
+}
+
+/* ===================== RESPONSIVE (For Small Phones) ===================== */
+@media (max-width: 390px) {
+  .ad-banner {
+    max-height: 110px;
+  }
+  .ad-banner img {
+    max-height: 110px;
+  }
+
+  .countdown-item span {
+    font-size: 28px; /* Still big, but fits smaller screens */
+  }
+  .countdown-item {
+    min-width: 42px;
+    padding: 6px 10px;
+  }
+  .countdown-item small {
+    font-size: 9px;
+  }
+  .colon {
+    font-size: 24px;
+  }
+}
