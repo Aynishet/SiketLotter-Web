@@ -1,7 +1,7 @@
 /* =====================================
    SIKET EKUB TELEGRAM CONNECTION
 ===================================== */
-const TELEGRAM_BOT = "https://t.me/SiketEkubbot";
+const TELEGRAM_BOT = "https://t.me/siketekubot";
 
 function openTelegram(source = "website") {
     const message = encodeURIComponent(
