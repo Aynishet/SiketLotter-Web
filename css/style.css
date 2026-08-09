@@ -114,8 +114,8 @@ body {
 .account-item { background: var(--card2); padding: 15px; border-radius: 15px; margin-top: 15px; display: flex; justify-content: space-between; }
 
 /* ===================== BOTTOM NAV ===================== */
-.bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; height: 75px; background: #03111D; display: flex; justify-content: space-around; align-items: center; border-top: 1px solid var(--border); }
-.bottom-nav a { color: var(--muted); text-decoration: none; display: flex; flex-direction: column; align-items: center; font-size: 12px; cursor: pointer; }
+.bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; height: 55px; background: #03111D; display: flex; justify-content: space-around; align-items: center; border-top: 1px solid var(--border); }
+.bottom-nav a { color: var(--muted); text-decoration: none; display: flex; flex-direction: column; align-items: center; font-size: 10px; cursor: pointer; }
 .bottom-nav span { font-size: 18px; }
 .bottom-nav .active { color: var(--gold); }
 
